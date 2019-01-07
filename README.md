@@ -1,5 +1,6 @@
 # expense-tracker
 This is expense tracker using Vue and firebase.
+At first, you have to set the config in "src/config/db.js" to use this project.
 
 ## Project setup
 ```
