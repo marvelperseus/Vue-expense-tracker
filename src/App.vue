@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <Header msg="This is header"/>
-    <div id="nav" class="page-container md-layout-column">
+    <!-- <div id="nav" class="page-container md-layout-column">
       <md-content>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/signup">Signup</router-link>
       </md-content>
-    </div>
+    </div> -->
     <router-view/>
     <Footer msg="This is footer"/>
   </div>

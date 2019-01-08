@@ -105,7 +105,7 @@ export default {
 <style scoped lang="scss">
 
 .page-container {
-    min-height: 300px;
+    margin-bottom: 12em;
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(#000, .12);

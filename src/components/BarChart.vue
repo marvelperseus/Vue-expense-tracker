@@ -20,10 +20,9 @@ export default {
   
   },
   beforeMount() {
-        // var totalAmounts   =  this.$root.$data.totals;
-        this.totalAmounts = store.state.message;
-       this.totalAmounts.forEach((element, index) => {
-         this.totalAmount[index] = element.amount;
+      this.totalAmounts = store.state.message;
+      this.totalAmounts.forEach((element, index) => {
+       this.totalAmount[index] = element.amount;
        });
        
   },

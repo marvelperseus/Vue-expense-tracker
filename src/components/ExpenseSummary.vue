@@ -1,6 +1,9 @@
 <template>
   <div class="enter-expense container">
     <md-card>
+        <div v-if="isLoading">
+            <md-progress-bar md-mode="indeterminate"></md-progress-bar>
+        </div>
       <md-card-header>
         <div class="row">
           <h3>Expenses Summary</h3>
@@ -80,6 +83,7 @@ export default {
   name: 'ExpenseSummary',
   data() {
       return {
+          isLoading: true,
           expenseinfos: [],
           currentuser:[],
           expense_categories: '',
@@ -125,7 +129,6 @@ export default {
          this.expenseinfos = expenseinfosarray;
          this.totalsByCategory = totals;
          store.setMessageAction(totals)
-        //  this.$root.$data.totals = totals;
  
       },
       getTotalByUser() {
@@ -141,7 +144,7 @@ export default {
             sum.push(totalAmount.toFixed(2))
         });
         this.totalamounts = sum;
-
+        this.isLoading = false;
       },
       getTotalsByCategory() {
 
@@ -189,6 +192,10 @@ export default {
     }
     h4 {
         margin: 0 auto;
+    }
+    h3 {
+        float: left;
+        margin: 0 2rem;
     }
 }
 </style>

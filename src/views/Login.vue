@@ -68,12 +68,16 @@ export default {
   div {
     margin: 0 auto;
     width: 100%;
+    .md-button {
+        margin-bottom: 2em;
+    }
   }
 }
 h3 {
   margin: 20px 0 40px;
   float: left;
 }
+
 button {
   width: 100%;
 }
