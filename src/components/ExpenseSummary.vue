@@ -1,5 +1,5 @@
 <template>
-  <div class="enter-expense container">
+  <div class="expensesummary container">
     <md-card>
         <div v-if="isLoading">
             <md-progress-bar md-mode="indeterminate"></md-progress-bar>
@@ -73,7 +73,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import firebase from 'firebase';
 import { db } from '../config/db'
 import store  from '../config/store'
@@ -169,6 +169,9 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+.expensesummary{
+    margin-top: 4em;
+}
 .md-card {
   margin: 0 0 7rem;
   box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.3)

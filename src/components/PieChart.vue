@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang="js">
 import firebase from 'firebase';
 import { db } from '../config/db'
 import { Pie, mixins } from 'vue-chartjs'

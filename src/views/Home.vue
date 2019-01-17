@@ -4,18 +4,35 @@
     <ExpenseSummary/>
     <EnterExpense/>
     <button @click="logout">Logout</button>
+
+    <md-speed-dial id="viewexpense" class="md-bottom-right">
+      <router-link to="/view-expense">
+        <md-speed-dial-target>
+          <md-icon>assessment</md-icon>
+        </md-speed-dial-target>
+      </router-link>
+      <b-popover target="viewexpense"
+                   placement="topleft"
+                   title="Viewexpense!"
+                   triggers="hover focus"
+                   content="Go to View Expense">
+        </b-popover>
+    </md-speed-dial>
     
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import EnterExpense from '@/components/EnterExpense.vue';
-import ExpenseSummary from '@/components/ExpenseSummary.vue';
+import HelloWorld from '../components/HelloWorld.vue'; // @ is an alias to /src
+import EnterExpense from '../components/EnterExpense.vue';
+import ExpenseSummary from '../components/ExpenseSummary.vue';
 import firebase from 'firebase';
 
-@Component({
+
+
+export default {
+  name: 'Home',
   components: {
      HelloWorld,EnterExpense,ExpenseSummary
   },
@@ -26,6 +43,13 @@ import firebase from 'firebase';
       })
     }
   }
-})
-export default class Home extends Vue {}
+}
 </script>
+<style lang="scss">
+  .md-speed-dial {
+      position: fixed !important;
+      bottom: 85px !important;
+      right: 25px !important;
+  } 
+    
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="container"> 
-    <md-card>
+    <md-card class="category">
       <md-card-header>
         <div class="row">
           <h3> Category Summary</h3>
@@ -43,11 +43,24 @@
         <Table/>
       </md-card-content>
     </md-card>
+    <md-speed-dial id="home" class="md-bottom-right">
+       <router-link to="/home">
+      <md-speed-dial-target>
+        <md-icon>add_comment</md-icon>
+      </md-speed-dial-target>
+       </router-link>
+       <b-popover target="home"
+                   placement="topleft"
+                   title="Home!"
+                   triggers="hover focus"
+                   content="Go to Home">
+        </b-popover>
+    </md-speed-dial>
   </div>
 </template>
 
 
-<script lang="ts">
+<script lang="js">
 import PieChart  from '../components/PieChart.vue'
 import BarChart  from '../components/BarChart.vue'
 import Table from '../components/Table.vue'
@@ -74,6 +87,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .md-card {
+  &.category {
+      margin-top: 3rem;
+  }
+}
+.md-card {
   margin: 0 0 7rem;
   box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.3)
 }
@@ -94,9 +112,12 @@ h3 {
   margin: 20px 0 40px;
   float: left;
 }
-button {
-  width: 100%;
-}
+
+.md-speed-dial {
+    position: fixed !important;
+    bottom: 85px !important;
+    right: 25px !important;
+} 
 
 
 </style>

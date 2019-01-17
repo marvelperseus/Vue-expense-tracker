@@ -1,31 +1,23 @@
 <template>
   <div id="app">
-    <Header msg="This is header"/>
-    <!-- <div id="nav" class="page-container md-layout-column">
-      <md-content>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/signup">Signup</router-link>
-      </md-content>
-    </div> -->
-    <router-view/>
-    <Footer msg="This is footer"/>
+     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
+    <Header/>
+   
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import { Component, Vue } from 'vue-property-decorator';
+import Header from './components/Header.vue';
 
-import Footer from '@/components/Footer.vue';
-import Header from '@/components/Header.vue';
 
-@Component({
+export default {
+  name: 'App',
   components: {
-    Footer, Header
-  },
-})
-export default class App extends Vue {}
+    Header
+  }
+}
+
 </script>
 
 
@@ -47,13 +39,6 @@ export default class App extends Vue {}
     }
   }
 }
-.footer {
-  background-color: #0275d8;
-  color: white;
-}
-.header {
-  background-color: #0275d8;
-  color: white;
-}
+
 
 </style>

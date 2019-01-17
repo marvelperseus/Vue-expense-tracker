@@ -1,31 +1,43 @@
 <template>
   <div class="footer">
-    <h1>{{ msg }}</h1>
+    <h4>Expense Tracker(VUEX)</h4>
+    <h5>by marvelperseus</h5>
+    <a class="link-text" :href="'https://github.com/marvelperseus'" target="_blank">
+    <img src="../assets/github.svg"/>
+    </a>
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
-export default class Footer extends Vue {
+export default {
+  name: 'Footer',
+  computed: {
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+.footer {
+    width: 100%;
+    height: 75px;
+    background-color: #448aff;
+    color: white;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+img {
+    width: 2%;
+    margin: 17px 50px;
+    float: right;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+h4 {
+    float: left;
+    padding:20px;
 }
-a {
-  color: #42b983;
+h5 {
+    float: left;
+    padding:21px 0;
 }
 </style>

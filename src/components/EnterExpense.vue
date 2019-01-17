@@ -67,7 +67,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import firebase from 'firebase';
 import { db } from '../config/db'
 
